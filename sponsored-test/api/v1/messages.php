@@ -1,8 +1,8 @@
 {
   "messages": [
     {
-      "impression_id": 2,
-      "text": "Best Thai Food at Koh Tomyums.",
+      "impression_id": 3,
+      "text": "Authentic Thai at Koh Tomyums, DB Plaza.",
       "cta_url": "https://schnalz.net",
       "display_seconds": 8
     }
