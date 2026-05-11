@@ -1,8 +1,8 @@
 {
   "messages": [
     {
-      "impression_id": 1,
-      "text": "Tonight at DB Plaza: Italian food festival, 6–9 pm",
+      "impression_id": 2,
+      "text": "Best Thai Food at Koh Tomyums.",
       "cta_url": "https://schnalz.net",
       "display_seconds": 8
     }
