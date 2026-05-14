@@ -1,0 +1,28 @@
+name: Auto-translate sponsored messages
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'sponsored-test/api/v1/messages.php'
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python .github/scripts/translate.py
+      - name: Commit & push if changes
+        run: |
+          if [[ -z "$(git status -s sponsored-test/api/v1/messages.php)" ]]; then
+            echo "No translation changes to commit."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add sponsored-test/api/v1/messages.php
+          git commit -m "chore: auto-translate sponsored messages [skip ci]"
+          git push
