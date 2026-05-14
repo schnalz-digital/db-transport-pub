@@ -30,7 +30,7 @@ import urllib.parse
 import urllib.request
 from pathlib import Path
 
-FIXTURE = Path("sponsored-test/api/v1/messages.php")
+FIXTURE = Path("messages/api/v1/messages.php")
 
 # Field name in JSON  -> MyMemory language code
 LANG_FIELDS: dict[str, str] = {

@@ -68,7 +68,7 @@ already pointing at this repo:
 
 ```swift
 private static let baseURL: String =
-    "https://raw.githubusercontent.com/schnalz-digital/db-transport-pub/main/sponsored-test"
+    "https://raw.githubusercontent.com/schnalz-digital/db-transport-pub/main/messages"
 private static let apiKey:  String = "test"
 ```
 
