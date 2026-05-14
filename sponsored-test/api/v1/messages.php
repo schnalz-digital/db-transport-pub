@@ -7,9 +7,9 @@
       "display_seconds": 8
     },
     {
-      "impression_id": 6,
-      "text": "Authentic Thai at Koh Tomyums, DB Plaza.",
-      "cta_url": "https://schnalz.net",
+      "impression_id": 7,
+      "text": "New: set any photo as your app wallpaper in Settings.",
+      "cta_url": null,
       "display_seconds": 8
     }
   ],
