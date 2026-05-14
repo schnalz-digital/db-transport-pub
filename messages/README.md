@@ -72,8 +72,11 @@ private static let baseURL: String =
 private static let apiKey:  String = "test"
 ```
 
-User toggles **Settings → Content → Sponsored messages** to opt in
-(off by default).
+**Visibility: always on for every user.** There is no Settings toggle.
+Every message you publish in this fixture reaches every installed
+copy of the app — write copy with that in mind (no debug strings, no
+half-finished drafts). A planned future IAP will let users buy
+"remove announcements" if they want to silence the row.
 
 ## Iteration cadence
 
