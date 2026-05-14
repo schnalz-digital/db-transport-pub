@@ -1,10 +1,10 @@
 {
   "messages": [
     {
-      "impression_id": 8,
-      "text": "DB Transport is free. Support development with a tip in Settings.",
-      "text_zh_hant": "DB Transport 免費使用。請於設定中打賞支持開發。",
-      "text_zh_hans": "DB Transport 免费使用。请在设置中打赏支持开发。",
+      "impression_id": 10,
+      "text": "Built by one DB resident. A tip in Settings keeps the app growing.",
+      "text_zh_hant": "由一位DB居民開發。於設定中打賞,助 DB Transport 持續成長。",
+      "text_zh_hans": "由一位DB居民开发。在设置中打赏,助 DB Transport 持续成长。",
       "cta_url": null,
       "display_seconds": 8
     },
