@@ -10,10 +10,10 @@
       "display_seconds": 12
     },
     {
-      "impression_id": 12,
-      "text": "Ferry schedules updated with the latest sailing times.",
-      "text_zh_hant": "渡輪班次時間已更新。",
-      "text_zh_hans": "渡轮班次已更新。",
+      "impression_id": 13,
+      "text": "New: the Discovery Bay Golf Club bus is now in the timetable.",
+      "text_zh_hant": "新增:愉景灣高爾夫球會巴士班次現已加入時間表。",
+      "text_zh_hans": "新增:愉景湾高尔夫球会巴士班次现已加入时间表。",
       "cta_url": null,
       "display_seconds": 12
     }
