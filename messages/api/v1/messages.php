@@ -10,11 +10,12 @@
       "display_seconds": 12
     },
     {
-      "impression_id": 13,
-      "text": "New: the Discovery Bay Golf Club bus is now in the timetable.",
-      "text_zh_hant": "新增:愉景灣高爾夫球會巴士班次現已加入時間表。",
-      "text_zh_hans": "新增:愉景湾高尔夫球会巴士班次现已加入时间表。",
+      "impression_id": 14,
+      "text": "If you’re missing some routes, try turning off “AI mode” in settings.",
+      "text_zh_hant": "如果找不到某些路線,請嘗試在設定中關閉「智能模式」。",
+      "text_zh_hans": "如果找不到某些路线,请尝试在设置中关闭“智能模式”。",
       "cta_url": null,
+      "deep_link": "dbtransport://settings",
       "display_seconds": 12
     }
   ],
