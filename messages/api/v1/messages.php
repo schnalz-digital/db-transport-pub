@@ -19,10 +19,10 @@
       "display_seconds": 12
     },
     {
-      "impression_id": 16,
-      "text": "The numbers shown are the actual bus route numbers, not a sequence.",
-      "text_zh_hant": "顯示的號碼是實際的巴士路線號碼,並非順序編號。",
-      "text_zh_hans": "显示的号码是实际的巴士路线号码,并非顺序编号。",
+      "impression_id": 17,
+      "text": "The number in front of each bus route is the bus number, not a sequence.",
+      "text_zh_hant": "每條巴士路線前的號碼是巴士號碼,並非排列順序。",
+      "text_zh_hans": "每条巴士路线前的号码是巴士号码,并非排列顺序。",
       "cta_url": null,
       "display_seconds": 12
     }
