@@ -19,10 +19,10 @@
       "display_seconds": 12
     },
     {
-      "impression_id": 15,
-      "text": "Mon 6 Jul: 10:10 ferry from DB and 10:40 from Central suspended.",
-      "text_zh_hant": "7月6日(一):愉景灣10:10及中環10:40渡輪班次暫停。",
-      "text_zh_hans": "7月6日(一):愉景湾10:10及中环10:40渡轮班次暂停。",
+      "impression_id": 16,
+      "text": "The numbers shown are the actual bus route numbers, not a sequence.",
+      "text_zh_hant": "顯示的號碼是實際的巴士路線號碼,並非順序編號。",
+      "text_zh_hans": "显示的号码是实际的巴士路线号码,并非顺序编号。",
       "cta_url": null,
       "display_seconds": 12
     }
