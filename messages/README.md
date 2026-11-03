@@ -13,11 +13,33 @@ Every entry in `messages[]` must populate:
 - `text_zh_hant` — Traditional Chinese (Hong Kong, Taiwan)
 - `text_zh_hans` — Simplified Chinese (mainland China, Singapore)
 
-The iOS-side `SponsoredMessage.localizedText(for:)` silently falls
-back to `text` when a translation is missing. That means an
-English-only message would ship to Chinese-locale TestFlight / App
-Store users mid-app without any visible warning. **Don't skip the
-translations, even temporarily.**
+The apps' `Announcement.localizedText` silently falls back to `text`
+when a translation is missing. That means an English-only message
+would ship to Chinese-locale App Store / Play users mid-app without
+any visible warning. **Don't skip the translations, even temporarily.**
+
+**Translate into Traditional and Simplified Chinese only.** Every other
+language reads the English `text`. (Owner's rule since 2026-11-03.)
+
+### `texts` (the tip-jar message only)
+
+The tip-jar message (impression_id 10) also carries `texts`: the app's
+other 33 languages, keyed by the app's own language codes (`ar ca cs
+da de el es es-MX fi fr fr-CA he hi hr hu id it ja ko ms nb nl pl pt-BR
+pt-PT ro ru sk sv th tr uk vi`). The app shows the language it is set
+to (Settings › Language, else the phone's): that language's entry,
+else its base language's (`fr` for `fr-CA`), else `text`. Chinese
+stays in the two fields above, never in `texts`. Versions before the
+field ignore it and show `text`. Don't add `texts` to new messages.
+
+### Two lines, on the smallest iPhone
+
+The row shows two lines and cuts the rest off with "…". On a 375-pt
+iPhone (SE, 12/13 mini) a line holds about 205 pt of 15-pt text
+(roughly 28 Latin characters or 13 Chinese characters); an iPhone 17
+holds about 227 pt. Keep every field within two such lines. In
+Chinese, put each sentence on its own line with `\n` (each at most 13
+characters) so the break never splits a word.
 
 ## Terminology — keep consistent with the rest of the app's L10n
 
@@ -40,7 +62,9 @@ translations, even temporarily.**
       "text": "<English copy>",
       "text_zh_hant": "<繁體中文>",
       "text_zh_hans": "<简体中文>",
+      "texts": { "de": "<Deutsch>", "fr-CA": "<français>", … },  // optional
       "cta_url": null | "<https://...>",  // null → first-party, URL → third-party
+      "deep_link": null | "dbtransport://settings",  // optional, in-app destination
       "display_seconds": <int>       // clamped 3..60 client-side
     }
   ],
@@ -87,3 +111,14 @@ GitHub raw's CDN edge caches `~5 min`. To force a refresh on-device:
   treat the pool as fresh — bypasses on-device dedup against the
   previously-seen IDs).
 - Or kill + relaunch the app (skips `nextRefreshAt` throttle).
+
+## Closing a message (the ×)
+
+The × hides that `impression_id` for good on that device (the app
+keeps the last 20 closed IDs; reinstalling clears them). Only messages
+with an ID the person hasn't closed show up on the route list. So:
+
+- Fixing copy under the **same** ID reaches everyone who hasn't
+  closed it, and stays hidden for those who have.
+- A **new** ID is a new message: it shows to everyone, including
+  people who closed the old one.
